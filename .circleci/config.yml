@@ -40,4 +40,8 @@ jobs:
             sbt test exit
 
       - store_test_results:
-          path: target/test-reports
+          path: /tmp/test-results
+
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test_results
